@@ -24,3 +24,5 @@ repository patterns
 ## packages
 
     flutter_svg
+
+    google_fonts
