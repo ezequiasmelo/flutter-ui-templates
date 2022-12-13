@@ -22,3 +22,5 @@ repository patterns
     flutter create --project-name flutter_ui --platforms windows,android,web ./flutter-ui
 
 ## packages
+
+    flutter_svg
