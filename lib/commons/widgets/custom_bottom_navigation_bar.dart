@@ -1,9 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_ui/commons/constants/app_colors.dart';
+import 'package:flutter_ui/commons/constants/routes.dart';
 
 class CustomBottomNavigationBar extends StatefulWidget {
+  final Function(int)? onTap;
+  final int? selectedIndex;
+
   const CustomBottomNavigationBar({
     Key? key,
+    this.onTap,
+    this.selectedIndex,
   }) : super(key: key);
 
   @override
@@ -12,31 +18,86 @@ class CustomBottomNavigationBar extends StatefulWidget {
 }
 
 class _CustomBottomNavigationBarState extends State<CustomBottomNavigationBar> {
-  var _selectedIndex = 0;
-
-  void _onItemTapped(int index) {
-    setState(() {
-      _selectedIndex = index;
-    });
-  }
-
   @override
   Widget build(BuildContext context) {
-    return BottomNavigationBar(
-      backgroundColor: AppColors.darkLight,
-      selectedItemColor: AppColors.yellow,
-      items: const <BottomNavigationBarItem>[
-        BottomNavigationBarItem(
-          icon: Icon(Icons.control_point),
-          label: 'Novo bolão',
-        ),
-        BottomNavigationBarItem(
-          icon: Icon(Icons.sports_soccer),
-          label: 'Meus bolões',
-        ),
-      ],
-      currentIndex: _selectedIndex,
-      onTap: _onItemTapped,
+    return SizedBox(
+      height: 80.0,
+      child: BottomNavigationBar(
+        backgroundColor: AppColors.darkLight,
+        selectedItemColor: AppColors.yellow,
+        items: <BottomNavigationBarItem>[
+          BottomNavigationBarItem(
+            // icon: Icon(Icons.control_point),
+            // label: 'Novo bolão',
+            icon: Padding(
+              padding: const EdgeInsets.only(top: 10.0),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Icon(
+                    Icons.control_point,
+                    color: widget.selectedIndex == 0
+                        ? AppColors.yellow
+                        : AppColors.grey,
+                  ),
+                  const SizedBox(width: 5.0),
+                  Text(
+                    'Novo bolão',
+                    style: TextStyle(
+                      fontSize: 16.0,
+                      color: widget.selectedIndex == 0
+                          ? AppColors.yellow
+                          : AppColors.grey,
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            label: '',
+          ),
+          BottomNavigationBarItem(
+            icon: Padding(
+              padding: const EdgeInsets.only(top: 10.0),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Icon(
+                    Icons.sports_soccer,
+                    color: widget.selectedIndex == 1
+                        ? AppColors.yellow
+                        : AppColors.grey,
+                  ),
+                  const SizedBox(width: 5.0),
+                  Text(
+                    'Meus bolões',
+                    style: TextStyle(
+                      fontSize: 16.0,
+                      color: widget.selectedIndex == 1
+                          ? AppColors.yellow
+                          : AppColors.grey,
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            label: '',
+          ),
+        ],
+        currentIndex: widget.selectedIndex!,
+        onTap: (int index) {
+          if (index != widget.selectedIndex! && index == 0) {
+            Navigator.pushNamed(
+              context,
+              NamedRoute.new_,
+            );
+          } else if (index != widget.selectedIndex! && index == 1) {
+            Navigator.pushNamed(
+              context,
+              NamedRoute.my,
+            );
+          }
+        },
+      ),
     );
   }
 }

@@ -1,65 +1,37 @@
 import 'dart:developer';
 
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import 'package:flutter_ui/commons/constants/app_colors.dart';
 import 'package:flutter_ui/commons/widgets/custom_app_bar.dart';
 import 'package:flutter_ui/commons/widgets/custom_bottom_navigation_bar.dart';
-import 'package:flutter_ui/commons/widgets/custom_text_form_field.dart';
 import 'package:flutter_ui/commons/widgets/custom_elevated_button.dart';
 
-class NewPage extends StatefulWidget {
-  const NewPage({Key? key}) : super(key: key);
+class MyPage extends StatefulWidget {
+  const MyPage({Key? key}) : super(key: key);
 
   @override
-  State<NewPage> createState() => _NewPageState();
+  State<MyPage> createState() => _MyPageState();
 }
 
-class _NewPageState extends State<NewPage> {
+class _MyPageState extends State<MyPage> {
   var isLoading = false;
-  var selectedIndex = 0;
+  var selectedIndex = 1;
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar:
-          // AppBar(
-          //   title: const Text(
-          //     'Criar novo bolão',
-          //     style: TextStyle(
-          //       fontSize: 16,
-          //       fontWeight: FontWeight.w500,
-          //     ),
-          //   ),
-          // )
-          CustomAppBar(
-        title: 'Criar novo bolão',
-      ),
+      // appBar: const CustomAppBar(
+      //   title: 'Meu boloões',
+      // ),
       body: SafeArea(
         child: Padding(
-          padding: const EdgeInsets.all(14.0),
+          padding: const EdgeInsets.all(32.0),
           child: Column(
             children: [
-              const SizedBox(height: 30.0),
-              SvgPicture.asset('assets/images/logo.svg'),
-              const SizedBox(height: 30.0),
-              const Text(
-                'Crie seu próprio bolão da copa e compartilhe entre amigos!',
-                style: TextStyle(
-                  color: AppColors.white,
-                  fontSize: 24,
-                  fontWeight: FontWeight.bold,
-                ),
-                textAlign: TextAlign.center,
-              ),
-              const SizedBox(height: 32.0),
-              const CustomTextFormField(
-                hintText: 'Qual nome do seu bolão?',
-              ),
               Padding(
                 padding: const EdgeInsets.only(top: 16.0),
                 child: CustomElevatedButton(
-                  text: 'CRIAR MEU BOLÃO',
+                  text: 'BUSCAR BOLÃO POR CÓDIGO',
                   onPressed: isLoading
                       ? null
                       : () {
@@ -77,10 +49,11 @@ class _NewPageState extends State<NewPage> {
                   isLoading: isLoading,
                 ),
               ),
+              const Divider(),
               const Padding(
                 padding: EdgeInsets.all(16.0),
                 child: Text(
-                  'Após criar seu bolão, você receberá um código único que poderá usar para convidar outras pessoas.',
+                  'Você ainda não está participando de nenhum bolão, que tal buscar um por código ou criar um novo?',
                   style: TextStyle(
                     color: AppColors.grey,
                     fontSize: 14,

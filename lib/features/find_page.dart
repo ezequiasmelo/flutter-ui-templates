@@ -3,44 +3,37 @@ import 'dart:developer';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:flutter_ui/commons/constants/app_colors.dart';
-import 'package:flutter_ui/commons/widgets/custom_app_bar.dart';
-import 'package:flutter_ui/commons/widgets/custom_bottom_navigation_bar.dart';
 import 'package:flutter_ui/commons/widgets/custom_text_form_field.dart';
 import 'package:flutter_ui/commons/widgets/custom_elevated_button.dart';
 
-class NewPage extends StatefulWidget {
-  const NewPage({Key? key}) : super(key: key);
+class FindPage extends StatefulWidget {
+  const FindPage({Key? key}) : super(key: key);
 
   @override
-  State<NewPage> createState() => _NewPageState();
+  State<FindPage> createState() => _FindPageState();
 }
 
-class _NewPageState extends State<NewPage> {
+class _FindPageState extends State<FindPage> {
   var isLoading = false;
   var selectedIndex = 0;
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar:
-          // AppBar(
-          //   title: const Text(
-          //     'Criar novo bolão',
-          //     style: TextStyle(
-          //       fontSize: 16,
-          //       fontWeight: FontWeight.w500,
-          //     ),
-          //   ),
-          // )
-          CustomAppBar(
-        title: 'Criar novo bolão',
+      appBar: AppBar(
+        title: const Text(
+          'Criar novo bolão',
+          style: TextStyle(
+            fontSize: 16,
+            fontWeight: FontWeight.w500,
+          ),
+        ),
       ),
       body: SafeArea(
         child: Padding(
-          padding: const EdgeInsets.all(14.0),
+          padding: const EdgeInsets.all(32.0),
           child: Column(
             children: [
-              const SizedBox(height: 30.0),
               SvgPicture.asset('assets/images/logo.svg'),
               const SizedBox(height: 30.0),
               const Text(
@@ -92,12 +85,12 @@ class _NewPageState extends State<NewPage> {
           ),
         ),
       ),
-      bottomNavigationBar: CustomBottomNavigationBar(
-        selectedIndex: selectedIndex,
-        onTap: (int index) {
-          setState(() => selectedIndex = index);
-        },
-      ),
+      // bottomNavigationBar: CustomBottomNavigationBar(
+      //   selectedIndex: selectedIndex,
+      //   onTap: (int index) {
+      //     setState(() => selectedIndex = index);
+      //   },
+      // ),
     );
   }
 }
