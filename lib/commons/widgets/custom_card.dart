@@ -13,9 +13,13 @@ class CustomCard extends StatelessWidget {
     return Container(
       height: 80.0,
       decoration: BoxDecoration(
-        color: AppColors.greyDark,
-        shape: BoxShape.rectangle,
         borderRadius: BorderRadius.circular(4.0),
+        gradient: const LinearGradient(
+          begin: Alignment.bottomCenter,
+          end: Alignment.topCenter,
+          stops: [0.04, 0.0],
+          colors: [AppColors.yellow, AppColors.greyDark],
+        ),
       ),
       child: Container(
         margin: const EdgeInsets.all(16.0),
