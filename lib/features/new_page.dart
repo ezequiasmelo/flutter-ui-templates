@@ -32,8 +32,11 @@ class _NewPageState extends State<NewPage> {
           //     ),
           //   ),
           // )
-          CustomAppBar(
-        title: 'Criar novo bolão',
+          const PreferredSize(
+        preferredSize: Size.fromHeight(60),
+        child: CustomAppBar(
+          title: 'Criar novo bolão',
+        ),
       ),
       body: SafeArea(
         child: Padding(

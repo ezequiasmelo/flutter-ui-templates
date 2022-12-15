@@ -3,6 +3,7 @@ import 'dart:developer';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:flutter_ui/commons/constants/app_colors.dart';
+import 'package:flutter_ui/commons/widgets/custom_app_bar.dart';
 import 'package:flutter_ui/commons/widgets/custom_text_form_field.dart';
 import 'package:flutter_ui/commons/widgets/custom_elevated_button.dart';
 
@@ -20,13 +21,10 @@ class _FindPageState extends State<FindPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text(
-          'Criar novo bolão',
-          style: TextStyle(
-            fontSize: 16,
-            fontWeight: FontWeight.w500,
-          ),
+      appBar: const PreferredSize(
+        preferredSize: Size.fromHeight(60),
+        child: CustomAppBar(
+          title: 'Meu boloões',
         ),
       ),
       body: SafeArea(
