@@ -1,19 +1,19 @@
-class Polls {
+class Poll {
   final String id;
   final String name;
 
-  Polls({
+  Poll({
     required this.id,
     required this.name,
   });
 }
 
-List<Polls> polls = [
-  Polls(
+List<Poll> polls = [
+  Poll(
     id: "1",
     name: "BOLÃO TESTE",
   ),
-  Polls(
+  Poll(
     id: "2",
     name: "BOLÃO 2",
   ),

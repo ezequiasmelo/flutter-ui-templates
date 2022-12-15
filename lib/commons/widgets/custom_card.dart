@@ -3,7 +3,7 @@ import 'package:flutter_ui/commons/constants/app_colors.dart';
 import 'package:flutter_ui/models/polls.dart';
 
 class CustomCard extends StatelessWidget {
-  final Polls? pools;
+  final Poll? pools;
   final int index;
 
   const CustomCard(this.pools, this.index, {super.key});
