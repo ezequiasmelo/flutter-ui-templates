@@ -3,15 +3,16 @@ import 'package:flutter_ui/commons/constants/app_colors.dart';
 import 'package:flutter_ui/models/polls.dart';
 
 class CustomCard extends StatelessWidget {
-  final Poll? pools;
-  final int index;
+  final Widget? child;
+  final Poll? poll;
 
-  const CustomCard(this.pools, this.index, {super.key});
+  const CustomCard(this.child, this.poll, {super.key});
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 80.0,
+      // height: 80.0,
+      margin: const EdgeInsets.only(bottom: 8.0),
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(4.0),
         gradient: const LinearGradient(
@@ -24,27 +25,29 @@ class CustomCard extends StatelessWidget {
       child: Container(
         margin: const EdgeInsets.all(16.0),
         constraints: const BoxConstraints.expand(),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          mainAxisAlignment: MainAxisAlignment.spaceAround,
-          children: [
-            Text(
-              pools!.name,
-              style: const TextStyle(
-                color: AppColors.white,
-                fontSize: 16,
-              ),
-              textAlign: TextAlign.center,
-            ),
-            const Text(
-              'Criado por',
-              style: TextStyle(
-                color: AppColors.grey,
-                fontSize: 12,
-              ),
-            ),
-          ],
-        ),
+        child:
+            // Column(
+            //   crossAxisAlignment: CrossAxisAlignment.start,
+            //   mainAxisAlignment: MainAxisAlignment.spaceAround,
+            //   children: [
+            //     Text(
+            //       poll!.name,
+            //       style: const TextStyle(
+            //         color: AppColors.white,
+            //         fontSize: 16,
+            //       ),
+            //       textAlign: TextAlign.center,
+            //     ),
+            //     const Text(
+            //       'Criado por',
+            //       style: TextStyle(
+            //         color: AppColors.grey,
+            //         fontSize: 12,
+            //       ),
+            //     ),
+            //   ],
+            // ),
+            child,
       ),
     );
   }

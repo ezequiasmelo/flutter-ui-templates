@@ -2,6 +2,7 @@ import 'dart:developer';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_ui/commons/constants/app_colors.dart';
+import 'package:flutter_ui/commons/constants/routes.dart';
 import 'package:flutter_ui/commons/widgets/custom_app_bar.dart';
 import 'package:flutter_ui/commons/widgets/custom_bottom_navigation_bar.dart';
 import 'package:flutter_ui/commons/widgets/custom_card.dart';
@@ -77,10 +78,40 @@ class _MyPageState extends State<MyPage> {
                         delegate: SliverChildBuilderDelegate(
                           (context, index) {
                             return GestureDetector(
-                              onTap: () => {},
+                              onTap: () => {
+                                Navigator.pushReplacementNamed(
+                                  context,
+                                  NamedRoute.details,
+                                  arguments: polls[index],
+                                )
+                              },
                               child: Stack(
                                 children: [
-                                  CustomCard(polls[index], index),
+                                  CustomCard(
+                                      Column(
+                                        crossAxisAlignment:
+                                            CrossAxisAlignment.start,
+                                        mainAxisAlignment:
+                                            MainAxisAlignment.spaceAround,
+                                        children: [
+                                          Text(
+                                            polls[index].name,
+                                            style: const TextStyle(
+                                              color: AppColors.white,
+                                              fontSize: 16,
+                                            ),
+                                            textAlign: TextAlign.center,
+                                          ),
+                                          const Text(
+                                            'Criado por',
+                                            style: TextStyle(
+                                              color: AppColors.grey,
+                                              fontSize: 12,
+                                            ),
+                                          ),
+                                        ],
+                                      ),
+                                      polls[index]),
                                 ],
                               ),
                             );

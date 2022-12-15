@@ -23,66 +23,17 @@ class _DetailsPageState extends State<DetailsPage> {
       appBar: const PreferredSize(
         preferredSize: Size.fromHeight(60),
         child: CustomAppBar(
-          title: 'Meu boloões',
+          title: 'BOLÃO TESTE',
         ),
       ),
       body: SafeArea(
         child: Padding(
           padding: const EdgeInsets.all(32.0),
           child: Column(
-            children: [
-              SvgPicture.asset('assets/images/logo.svg'),
-              const SizedBox(height: 30.0),
-              const Text(
-                'Crie seu próprio bolão da copa e compartilhe entre amigos!',
-                style: TextStyle(
-                  color: AppColors.white,
-                  fontSize: 24,
-                  fontWeight: FontWeight.bold,
-                ),
-                textAlign: TextAlign.center,
-              ),
-              const SizedBox(height: 32.0),
-              const CustomTextFormField(
-                hintText: 'Qual nome do seu bolão?',
-              ),
-              Padding(
-                padding: const EdgeInsets.only(top: 16.0),
-                child: CustomElevatedButton(
-                  text: 'CRIAR MEU BOLÃO',
-                  onPressed: isLoading
-                      ? null
-                      : () {
-                          log('tap');
-                          setState(() {
-                            isLoading = true;
-                          });
-
-                          Future.delayed(const Duration(seconds: 3), () {
-                            setState(() {
-                              isLoading = false;
-                            });
-                          });
-                        },
-                  isLoading: isLoading,
-                ),
-              ),
-              const Padding(
-                padding: EdgeInsets.all(16.0),
-                child: Text(
-                  'Após criar seu bolão, você receberá um código único que poderá usar para convidar outras pessoas.',
-                  style: TextStyle(
-                    color: AppColors.grey,
-                    fontSize: 14,
-                  ),
-                  textAlign: TextAlign.center,
-                ),
-              )
-            ],
+            children: [],
           ),
         ),
       ),
-      // bottomNavigationBar: const CustomBottomNavigationBar(),
     );
   }
 }
