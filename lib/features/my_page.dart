@@ -88,30 +88,31 @@ class _MyPageState extends State<MyPage> {
                               child: Stack(
                                 children: [
                                   CustomCard(
-                                      Column(
-                                        crossAxisAlignment:
-                                            CrossAxisAlignment.start,
-                                        mainAxisAlignment:
-                                            MainAxisAlignment.spaceAround,
-                                        children: [
-                                          Text(
-                                            polls[index].name,
-                                            style: const TextStyle(
-                                              color: AppColors.white,
-                                              fontSize: 16,
-                                            ),
-                                            textAlign: TextAlign.center,
+                                    Column(
+                                      crossAxisAlignment:
+                                          CrossAxisAlignment.start,
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.spaceAround,
+                                      children: [
+                                        Text(
+                                          polls[index].name,
+                                          style: const TextStyle(
+                                            color: AppColors.white,
+                                            fontSize: 16,
                                           ),
-                                          const Text(
-                                            'Criado por',
-                                            style: TextStyle(
-                                              color: AppColors.grey,
-                                              fontSize: 12,
-                                            ),
+                                          textAlign: TextAlign.center,
+                                        ),
+                                        const Text(
+                                          'Criado por',
+                                          style: TextStyle(
+                                            color: AppColors.grey,
+                                            fontSize: 12,
                                           ),
-                                        ],
-                                      ),
-                                      polls[index]),
+                                        ),
+                                      ],
+                                    ),
+                                    polls[index],
+                                  ),
                                 ],
                               ),
                             );

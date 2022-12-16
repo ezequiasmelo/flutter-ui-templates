@@ -28,9 +28,31 @@ class _DetailsPageState extends State<DetailsPage> {
       ),
       body: SafeArea(
         child: Padding(
-          padding: const EdgeInsets.all(32.0),
+          padding: const EdgeInsets.all(14.0),
           child: Column(
-            children: [],
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: const [
+              Text(
+                'BOLÃO TESTE',
+                style: TextStyle(
+                  color: AppColors.white,
+                  fontSize: 16,
+                ),
+                textAlign: TextAlign.center,
+              ),
+              Text(
+                'Código: ',
+                style: TextStyle(
+                  color: AppColors.grey,
+                  fontSize: 12,
+                ),
+              ),
+              Divider(
+                height: 30,
+                thickness: 0.3,
+                color: AppColors.grey,
+              )
+            ],
           ),
         ),
       ),
