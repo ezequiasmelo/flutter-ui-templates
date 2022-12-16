@@ -1,11 +1,8 @@
-import 'dart:developer';
-
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import 'package:flutter_ui/commons/constants/app_colors.dart';
 import 'package:flutter_ui/commons/widgets/custom_app_bar.dart';
-import 'package:flutter_ui/commons/widgets/custom_text_form_field.dart';
-import 'package:flutter_ui/commons/widgets/custom_elevated_button.dart';
+import 'package:flutter_ui/commons/widgets/custom_card.dart';
+import 'package:flutter_ui/models/polls.dart';
 
 class DetailsPage extends StatefulWidget {
   const DetailsPage({Key? key}) : super(key: key);
@@ -31,8 +28,8 @@ class _DetailsPageState extends State<DetailsPage> {
           padding: const EdgeInsets.all(14.0),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
-            children: const [
-              Text(
+            children: [
+              const Text(
                 'BOLÃO TESTE',
                 style: TextStyle(
                   color: AppColors.white,
@@ -40,18 +37,92 @@ class _DetailsPageState extends State<DetailsPage> {
                 ),
                 textAlign: TextAlign.center,
               ),
-              Text(
+              const Text(
                 'Código: ',
                 style: TextStyle(
                   color: AppColors.grey,
                   fontSize: 12,
                 ),
               ),
-              Divider(
+              const Divider(
                 height: 30,
                 thickness: 0.3,
                 color: AppColors.grey,
-              )
+              ),
+              Expanded(
+                child: CustomScrollView(
+                  scrollDirection: Axis.vertical,
+                  slivers: <Widget>[
+                    SliverPadding(
+                      padding: const EdgeInsets.symmetric(vertical: 24.0),
+                      sliver: SliverFixedExtentList(
+                        itemExtent: 90.0,
+                        delegate: SliverChildBuilderDelegate(
+                          (context, index) {
+                            return GestureDetector(
+                              onTap: () => {
+                                // Navigator.pushReplacementNamed(
+                                //   context,
+                                //   NamedRoute.details,
+                                //   arguments: polls[index],
+                                // )
+                              },
+                              child: Stack(
+                                children: [
+                                  CustomCard(
+                                    // height: 500.0,
+                                    child: Column(
+                                      crossAxisAlignment:
+                                          CrossAxisAlignment.center,
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.spaceAround,
+                                      children: [
+                                        const Text(
+                                          'Brazil vs. Argentina',
+                                          style: TextStyle(
+                                            color: AppColors.white,
+                                            fontSize: 14,
+                                          ),
+                                          textAlign: TextAlign.center,
+                                        ),
+                                        const Text(
+                                          '22 de Novembro de 2022 às 16:00h',
+                                          style: TextStyle(
+                                            color: AppColors.grey,
+                                            fontSize: 12,
+                                          ),
+                                        ),
+                                        SizedBox(
+                                          height: 20,
+                                          child: Row(
+                                            mainAxisAlignment:
+                                                MainAxisAlignment.spaceBetween,
+                                            children: const [
+                                              Text('1'),
+                                              Icon(
+                                                Icons.clear,
+                                                color: AppColors.grey,
+                                                size: 30.0,
+                                              ),
+                                              Text('3'),
+                                            ],
+                                          ),
+                                        ),
+                                      ],
+                                    ),
+                                    // polls[index],
+                                  ),
+                                ],
+                              ),
+                            );
+                          },
+                          childCount: polls.length,
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
             ],
           ),
         ),

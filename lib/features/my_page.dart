@@ -88,7 +88,7 @@ class _MyPageState extends State<MyPage> {
                               child: Stack(
                                 children: [
                                   CustomCard(
-                                    Column(
+                                    child: Column(
                                       crossAxisAlignment:
                                           CrossAxisAlignment.start,
                                       mainAxisAlignment:
@@ -111,7 +111,7 @@ class _MyPageState extends State<MyPage> {
                                         ),
                                       ],
                                     ),
-                                    polls[index],
+                                    // polls[index],
                                   ),
                                 ],
                               ),

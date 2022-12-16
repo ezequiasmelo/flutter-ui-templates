@@ -1,17 +1,21 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_ui/commons/constants/app_colors.dart';
-import 'package:flutter_ui/models/polls.dart';
 
 class CustomCard extends StatelessWidget {
   final Widget? child;
-  final Poll? poll;
+  // final Poll? poll;
+  final double? height;
 
-  const CustomCard(this.child, this.poll, {super.key});
+  const CustomCard({
+    this.child,
+    this.height,
+    Key? key,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      // height: 80.0,
+      // height: height ?? 80.0,
       margin: const EdgeInsets.only(bottom: 8.0),
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(4.0),
