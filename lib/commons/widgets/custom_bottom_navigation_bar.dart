@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_ui/commons/constants/app_colors.dart';
-import 'package:flutter_ui/commons/constants/routes.dart';
 
 class CustomBottomNavigationBar extends StatefulWidget {
   final Function(int)? onTap;

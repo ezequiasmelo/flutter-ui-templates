@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_ui/commons/widgets/custom_card.dart';
+import 'package:flutter_ui/commons/widgets/custom_big_card.dart';
 import 'package:flutter_ui/features/home/components/home_app_bar.dart';
 import 'package:flutter_ui/models/courses.dart';
 
@@ -9,10 +9,10 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      // appBar: const PreferredSize(
-      //   preferredSize: Size.fromHeight(140),
-      //   child: HomeAppBar(),
-      // ),
+      appBar: const PreferredSize(
+        preferredSize: Size.fromHeight(140),
+        child: HomeAppBar(),
+      ),
       body: SafeArea(
           child: Padding(
         padding: const EdgeInsets.all(14.0),
@@ -37,9 +37,7 @@ class HomePage extends StatelessWidget {
                               //   arguments: polls[index],
                               // )
                             },
-                            child: CustomCard(
-                              child: Text('ew'),
-                            ),
+                            child: CustomBigCard(courses[index]),
                           );
                         },
                         childCount: courses.length,
