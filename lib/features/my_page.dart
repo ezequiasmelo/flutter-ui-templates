@@ -79,11 +79,11 @@ class _MyPageState extends State<MyPage> {
                           (context, index) {
                             return GestureDetector(
                               onTap: () => {
-                                Navigator.pushReplacementNamed(
-                                  context,
-                                  NamedRoute.details,
-                                  arguments: polls[index],
-                                )
+                                // Navigator.pushReplacementNamed(
+                                //   context,
+                                //   NamedRoute.details,
+                                //   arguments: polls[index],
+                                // )
                               },
                               child: Stack(
                                 children: [

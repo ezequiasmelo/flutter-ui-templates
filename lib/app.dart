@@ -1,10 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_ui/commons/constants/app_colors.dart';
 import 'package:flutter_ui/commons/constants/routes.dart';
-import 'package:flutter_ui/features/details_page.dart';
-import 'package:flutter_ui/features/find_page.dart';
-import 'package:flutter_ui/features/my_page.dart';
-import 'package:flutter_ui/features/new_page.dart';
+import 'package:flutter_ui/features/course_page.dart';
+import 'package:flutter_ui/features/home/home_page.dart';
 import 'package:flutter_ui/features/splash_page.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -16,23 +14,19 @@ class App extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        scaffoldBackgroundColor: AppColors.dark,
+        scaffoldBackgroundColor: AppColors.black,
         appBarTheme: ThemeData.dark().appBarTheme.copyWith(
-              backgroundColor: AppColors.darkLight,
-              centerTitle: true,
+              backgroundColor: Colors.transparent,
             ),
-        textTheme: GoogleFonts.robotoTextTheme(
+        textTheme: GoogleFonts.nunitoTextTheme(
           Theme.of(context).textTheme,
         ),
       ),
-      // home: const NewPage(),
-      initialRoute: NamedRoute.splash,
+      initialRoute: NamedRoute.home,
       routes: {
         NamedRoute.splash: (context) => const SplashPage(),
-        NamedRoute.new_: (context) => const NewPage(),
-        NamedRoute.my: (context) => const MyPage(),
-        NamedRoute.find: (context) => const FindPage(),
-        NamedRoute.details: (context) => const DetailsPage(),
+        NamedRoute.home: (context) => const HomePage(),
+        NamedRoute.course: (context) => const CoursePage(),
       },
     );
   }

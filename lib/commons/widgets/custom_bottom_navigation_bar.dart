@@ -86,15 +86,15 @@ class _CustomBottomNavigationBarState extends State<CustomBottomNavigationBar> {
         currentIndex: widget.selectedIndex!,
         onTap: (int index) {
           if (index != widget.selectedIndex! && index == 0) {
-            Navigator.pushNamed(
-              context,
-              NamedRoute.new_,
-            );
+            // Navigator.pushNamed(
+            //   context,
+            //   NamedRoute.new_,
+            // );
           } else if (index != widget.selectedIndex! && index == 1) {
-            Navigator.pushNamed(
-              context,
-              NamedRoute.my,
-            );
+            // Navigator.pushNamed(
+            //   context,
+            //   NamedRoute.my,
+            // );
           }
         },
       ),

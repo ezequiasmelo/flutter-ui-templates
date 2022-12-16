@@ -17,7 +17,7 @@ class _SplashPageState extends State<SplashPage> {
       setState(() {
         Navigator.pushReplacementNamed(
           context,
-          NamedRoute.new_,
+          NamedRoute.home,
         );
       });
     });
