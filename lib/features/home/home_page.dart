@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_ui/commons/constants/routes.dart';
 import 'package:flutter_ui/commons/widgets/custom_big_card.dart';
 import 'package:flutter_ui/features/home/components/home_app_bar.dart';
 import 'package:flutter_ui/features/home/components/home_categories.dart';
@@ -21,7 +22,7 @@ class HomePage extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              HomeCategories(),
+              // HomeCategories(),
               Expanded(
                 child: CustomScrollView(
                   scrollDirection: Axis.vertical,
@@ -34,11 +35,11 @@ class HomePage extends StatelessWidget {
                           (context, index) {
                             return GestureDetector(
                               onTap: () => {
-                                // Navigator.pushReplacementNamed(
-                                //   context,
-                                //   NamedRoute.details,
-                                //   arguments: polls[index],
-                                // )
+                                Navigator.pushReplacementNamed(
+                                  context,
+                                  NamedRoute.course,
+                                  // arguments: polls[index],
+                                )
                               },
                               child: CustomBigCard(courses[index]),
                             );
