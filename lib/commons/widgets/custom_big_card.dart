@@ -21,14 +21,16 @@ class CustomBigCard extends StatelessWidget {
         image: DecorationImage(
           // alignment: Alignment.center,
           // matchTextDirection: true,
-          // repeat: ImageRepeat.noRepeat,
+          repeat: ImageRepeat.noRepeat,
           image: AssetImage(course.image),
+          fit: BoxFit.fitWidth,
         ),
       ),
       child: Container(
         margin: const EdgeInsets.all(26.0),
         constraints: const BoxConstraints.expand(),
         child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             Row(
