@@ -15,7 +15,7 @@ class HomeList extends StatelessWidget {
           SliverPadding(
             padding: const EdgeInsets.symmetric(vertical: 24.0),
             sliver: SliverFixedExtentList(
-              itemExtent: 300.0,
+              itemExtent: 310.0,
               delegate: SliverChildBuilderDelegate(
                 (context, index) {
                   return GestureDetector(

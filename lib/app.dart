@@ -1,3 +1,4 @@
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_ui/commons/constants/app_colors.dart';
 import 'package:flutter_ui/commons/constants/routes.dart';
@@ -13,6 +14,7 @@ class App extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
+      scrollBehavior: CustomScrollBehavior(),
       theme: ThemeData(
         scaffoldBackgroundColor: AppColors.black,
         appBarTheme: ThemeData.dark().appBarTheme.copyWith(
@@ -30,4 +32,12 @@ class App extends StatelessWidget {
       },
     );
   }
+}
+
+class CustomScrollBehavior extends MaterialScrollBehavior {
+  @override
+  Set<PointerDeviceKind> get dragDevices => {
+        PointerDeviceKind.touch,
+        PointerDeviceKind.mouse,
+      };
 }

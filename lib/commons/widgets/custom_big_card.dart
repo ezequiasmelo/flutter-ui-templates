@@ -13,14 +13,10 @@ class CustomBigCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 10,
-      margin: const EdgeInsets.only(
-          bottom: 20.0), // margin: const EdgeInsets.only(bottom: 12.0),
+      margin: const EdgeInsets.only(bottom: 10.0),
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(20.0),
         image: DecorationImage(
-          // alignment: Alignment.center,
-          // matchTextDirection: true,
           repeat: ImageRepeat.noRepeat,
           image: AssetImage(course.image),
           fit: BoxFit.fitWidth,
