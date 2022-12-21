@@ -20,10 +20,9 @@ class HomeList extends StatelessWidget {
                 (context, index) {
                   return GestureDetector(
                     onTap: () => {
-                      Navigator.pushReplacementNamed(
+                      Navigator.pushNamed(
                         context,
                         NamedRoute.course,
-                        // arguments: polls[index],
                       )
                     },
                     child: CustomBigCard(courses[index]),

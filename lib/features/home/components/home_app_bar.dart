@@ -51,12 +51,12 @@ class HomeAppBar extends StatelessWidget {
             children: [
               IconButton(
                 icon: const Icon(Icons.search),
-                tooltip: 'Comment Icon',
+                tooltip: 'Search',
                 onPressed: () {},
               ),
               IconButton(
                 icon: const Icon(Icons.notifications_none),
-                tooltip: 'Setting Icon',
+                tooltip: 'Notifications',
                 onPressed: () {},
               ),
             ],
