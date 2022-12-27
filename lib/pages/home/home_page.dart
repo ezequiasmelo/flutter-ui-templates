@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_ui/features/home/components/home_app_bar.dart';
-import 'package:flutter_ui/features/home/components/home_categories.dart';
-import 'package:flutter_ui/features/home/components/home_list.dart';
+import 'package:flutter_ui/pages/home/components/home_app_bar.dart';
+import 'package:flutter_ui/pages/home/components/home_categories.dart';
+import 'package:flutter_ui/pages/home/components/home_list.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
