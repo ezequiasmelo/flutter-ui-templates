@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:flutter_ui/commons/constants/app_colors.dart';
 import 'package:flutter_ui/models/courses.dart';
 
@@ -23,10 +24,12 @@ class CourseHeader extends StatelessWidget {
             borderRadius: BorderRadius.circular(14.0),
             color: AppColors.error,
           ),
-          child: Icon(
-            course.icon,
-            color: AppColors.white,
-          ),
+          child:
+              // Icon(
+              //   course.icon,
+              //   color: AppColors.white,
+              // ),
+              SvgPicture.asset(course.icon),
         ),
         const SizedBox(width: 10),
         Expanded(

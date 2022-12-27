@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_ui/commons/constants/routes.dart';
-import 'package:flutter_ui/commons/widgets/custom_big_card.dart';
+import 'package:flutter_ui/commons/widgets/big_card.dart';
 import 'package:flutter_ui/models/courses.dart';
 
 class HomeList extends StatelessWidget {
@@ -25,7 +25,7 @@ class HomeList extends StatelessWidget {
                         NamedRoute.course,
                       )
                     },
-                    child: CustomBigCard(courses[index]),
+                    child: BigCard(courses[index]),
                   );
                 },
                 childCount: courses.length,
@@ -34,15 +34,6 @@ class HomeList extends StatelessWidget {
           ),
         ],
       ),
-      //     ListView.separated(
-      //   physics: NeverScrollableScrollPhysics(),
-      //   shrinkWrap: true,
-      //   itemCount: courses.length,
-      //   itemBuilder: (_, idx) => CustomCard(
-      //     child: Text('ew'),
-      //   ),
-      //   separatorBuilder: (_, __) => const SizedBox(height: 10),
-      // ),
     );
   }
 }

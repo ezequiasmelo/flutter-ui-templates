@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:flutter_ui/commons/constants/app_colors.dart';
 import 'package:flutter_ui/models/courses.dart';
 
-class CustomBigCard extends StatelessWidget {
+class BigCard extends StatelessWidget {
   final Course course;
 
-  const CustomBigCard(
+  const BigCard(
     this.course, {
     Key? key,
   }) : super(key: key);
@@ -33,11 +34,12 @@ class CustomBigCard extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Icon(
-                  course.icon,
-                  color: AppColors.white,
-                  size: 32.0,
-                ),
+                // Icon(
+                //   course.icon,
+                //   color: AppColors.white,
+                //   size: 32.0,
+                // ),
+                SvgPicture.asset(course.icon),
                 const SizedBox(width: 10),
                 Expanded(
                   child: Text(
