@@ -34,20 +34,20 @@ class BigCard extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                // Icon(
-                //   course.icon,
-                //   color: AppColors.white,
-                //   size: 32.0,
-                // ),
-                SvgPicture.asset(course.icon),
+                SvgPicture.asset(
+                  course.icon,
+                  color: AppColors.white,
+                  width: 40.0,
+                ),
                 const SizedBox(width: 10),
                 Expanded(
                   child: Text(
                     course.name,
                     style: const TextStyle(
-                        color: AppColors.white,
-                        fontSize: 32,
-                        fontWeight: FontWeight.w500),
+                      color: AppColors.white,
+                      fontSize: 32,
+                      fontWeight: FontWeight.w500,
+                    ),
                   ),
                 ),
                 SizedBox(

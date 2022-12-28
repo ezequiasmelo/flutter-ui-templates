@@ -24,12 +24,13 @@ class CourseHeader extends StatelessWidget {
             borderRadius: BorderRadius.circular(14.0),
             color: AppColors.error,
           ),
-          child:
-              // Icon(
-              //   course.icon,
-              //   color: AppColors.white,
-              // ),
-              SvgPicture.asset(course.icon),
+          child: Center(
+            child: SvgPicture.asset(
+              course.icon,
+              color: AppColors.white,
+              width: 40.0,
+            ),
+          ),
         ),
         const SizedBox(width: 10),
         Expanded(

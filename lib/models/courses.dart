@@ -1,4 +1,3 @@
-import 'package:flutter/material.dart';
 import 'package:flutter_ui/models/videos.dart';
 
 class Course {
@@ -6,7 +5,7 @@ class Course {
   final String name;
   final String image;
   final int price;
-  final String icon; // final IconData icon;
+  final String icon;
   final String lesson;
   final String time;
   final List<Video>? videos;
@@ -22,9 +21,9 @@ class Course {
     this.videos,
   });
 
-  int countVideosFree(List<Video> videos) {
+  int countVideosFree() {
     var total = 0;
-    for (var element in videos) {
+    for (var element in videos!) {
       if (element.blocked == false) {
         total += 1;
       }
@@ -39,7 +38,7 @@ List<Course> courses = [
     name: "Illustrator",
     image: "assets/images/BG_red.png",
     price: 60,
-    icon: 'assets/images/icon_illustrator.svg', // icon: Icons.pentagon,
+    icon: 'assets/images/icon_illustrator.svg',
     lesson: "12",
     time: "28 hrs 40 mins",
     videos: [
@@ -81,29 +80,29 @@ List<Course> courses = [
     name: "Figma Prototyping",
     image: "assets/images/BG_blue.png",
     price: 45,
-    icon: 'assets/images/icon_figma.svg', // icon: Icons.account_tree,
+    icon: 'assets/images/icon_figma.svg',
     lesson: "08",
     time: "20 hrs 15 mins",
     videos: [],
   ),
   Course(
-    id: 2,
-    name: "Figma Prototyping",
-    image: "assets/images/BG_blue.png",
-    price: 50,
-    icon: 'assets/images/icon_illustrator.svg', // icon: Icons.pentagon,
+    id: 3,
+    name: "Dart",
+    image: "assets/images/BG_red.png",
+    price: 25,
+    icon: 'assets/images/icon_dart.svg',
     lesson: "12",
-    time: "28 hrs 40 mins",
+    time: "15 hrs 35 mins",
     videos: [],
   ),
   Course(
-    id: 2,
-    name: "Figma Prototyping",
+    id: 4,
+    name: "Flutter",
     image: "assets/images/BG_blue.png",
     price: 30,
-    icon: 'assets/images/icon_illustrator.svg', // icon: Icons.pentagon,
+    icon: 'assets/images/icon_flutter.svg',
     lesson: "12",
-    time: "28 hrs 40 mins",
+    time: "25 hrs 0 mins",
     videos: [],
   ),
 ];

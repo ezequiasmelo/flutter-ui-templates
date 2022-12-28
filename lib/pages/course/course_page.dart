@@ -81,7 +81,7 @@ class CoursePage extends StatelessWidget {
                           color: AppColors.yellow,
                         ),
                         child: Text(
-                          '${course.countVideosFree(course.videos!)} Free videos',
+                          '${course.countVideosFree()} Free videos',
                           style: const TextStyle(
                             fontSize: 14.0,
                             fontWeight: FontWeight.w600,
