@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_ui/commons/constants/routes.dart';
-import 'package:flutter_ui/commons/widgets/big_card.dart';
-import 'package:flutter_ui/models/courses.dart';
+import 'package:flutter_ui_templates/commons/constants/routes.dart';
+import 'package:flutter_ui_templates/commons/widgets/big_card.dart';
+import 'package:flutter_ui_templates/models/courses.dart';
 
 class HomeList extends StatelessWidget {
   const HomeList({super.key});

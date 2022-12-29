@@ -1,10 +1,10 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_ui/commons/constants/app_colors.dart';
-import 'package:flutter_ui/commons/constants/routes.dart';
-import 'package:flutter_ui/pages/course/course_page.dart';
-import 'package:flutter_ui/pages/home/home_page.dart';
-import 'package:flutter_ui/pages/splash_page.dart';
+import 'package:flutter_ui_templates/commons/constants/app_colors.dart';
+import 'package:flutter_ui_templates/commons/constants/routes.dart';
+import 'package:flutter_ui_templates/pages/course/course_page.dart';
+import 'package:flutter_ui_templates/pages/home/home_page.dart';
+import 'package:flutter_ui_templates/pages/splash_page.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class App extends StatelessWidget {

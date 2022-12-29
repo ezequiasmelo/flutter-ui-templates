@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_ui/commons/constants/app_colors.dart';
-import 'package:flutter_ui/commons/widgets/unlock_more_videos.dart';
-import 'package:flutter_ui/pages/course/components/course_app_bar.dart';
-import 'package:flutter_ui/pages/course/components/course_header.dart';
-import 'package:flutter_ui/models/courses.dart';
-import 'package:flutter_ui/pages/course/components/course_list.dart';
+import 'package:flutter_ui_templates/commons/constants/app_colors.dart';
+import 'package:flutter_ui_templates/commons/widgets/unlock_more_videos.dart';
+import 'package:flutter_ui_templates/pages/course/components/course_app_bar.dart';
+import 'package:flutter_ui_templates/pages/course/components/course_header.dart';
+import 'package:flutter_ui_templates/models/courses.dart';
+import 'package:flutter_ui_templates/pages/course/components/course_list.dart';
 
 class CoursePage extends StatelessWidget {
   final Course course = courses[0];

@@ -2,8 +2,8 @@ import 'dart:developer';
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_ui/commons/constants/app_colors.dart';
-import 'package:flutter_ui/commons/widgets/custom_radio_chips.dart';
+import 'package:flutter_ui_templates/commons/constants/app_colors.dart';
+import 'package:flutter_ui_templates/commons/widgets/custom_radio_chips.dart';
 
 class HomeCategories extends StatefulWidget {
   const HomeCategories({super.key});

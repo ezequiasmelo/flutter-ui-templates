@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_ui/commons/constants/app_colors.dart';
-import 'package:flutter_ui/models/videos.dart';
+import 'package:flutter_ui_templates/commons/constants/app_colors.dart';
+import 'package:flutter_ui_templates/models/videos.dart';
 
 class CourseList extends StatelessWidget {
   final List<Video>? videos;

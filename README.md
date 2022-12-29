@@ -1,28 +1,25 @@
-# flutter_ui
+# flutter-ui-templates
 
-A new Flutter project.
+## Figma community template
 
-## Getting Started
+* [Education App](https://www.figma.com/community/file/1182921586428123754)  (by 
+Nickelfox Design)
 
-This project is a starting point for a Flutter application.
 
-A few resources to get you started if this is your first Flutter project:
+## Commands
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+    flutter create --project-name flutter_ui_templates --platforms windows,android,web ./flutter-ui-templates
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Packages
 
-repository patterns
+* [flutter_svg](https://pub.dev/packages/flutter_svg)
 
-## commands
+* [google_fonts](https://pub.dev/packages/google_fonts)
 
-    flutter create --project-name flutter_ui --platforms windows,android,web ./flutter-ui
-
-## packages
-
-    flutter_svg
-
-    google_fonts
+## Screens
+<br>
+<div align="center">
+    <img src="screens/Screenshot_1672333463.png" width="160"/>
+    <img src="screens/Screenshot_1672333486.png" width="160"/>
+    <img src="screens/gif.gif" width="160"/>
+</div>

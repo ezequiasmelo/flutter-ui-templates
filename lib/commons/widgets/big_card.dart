@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:flutter_ui/commons/constants/app_colors.dart';
-import 'package:flutter_ui/models/courses.dart';
+import 'package:flutter_ui_templates/commons/constants/app_colors.dart';
+import 'package:flutter_ui_templates/models/courses.dart';
 
 class BigCard extends StatelessWidget {
   final Course course;

@@ -1,4 +1,4 @@
-import 'package:flutter_ui/models/videos.dart';
+import 'package:flutter_ui_templates/models/videos.dart';
 
 class Course {
   final int id;
