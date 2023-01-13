@@ -8,7 +8,7 @@ Nickelfox Design)
 
 ## Commands
 
-    flutter create --project-name flutter_ui_templates --platforms windows,android,web ./flutter-ui-templates
+    flutter create --project-name flutter_ui_templates --platforms android ./flutter-ui-templates
 
 ## Packages
 
