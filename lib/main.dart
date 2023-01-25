@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_ui_templates/my_card.dart';
+import 'package:flutter_ui_templates/calc.dart';
 
 void main() {
-  runApp(const MyCard());
+  runApp(const Calc());
 }
