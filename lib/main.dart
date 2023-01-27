@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_ui_templates/dadoos.dart';
+import 'package:flutter_ui_templates/calc.dart';
 
 void main() {
-  runApp(const Dadoos());
+  runApp(const Calc());
 }
