@@ -15,7 +15,7 @@ class CustomCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      // height: height ?? 80.0,
+      height: height ?? 80.0,
       margin: const EdgeInsets.only(bottom: 8.0),
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(4.0),

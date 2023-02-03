@@ -1,3 +1,4 @@
+import 'package:country_flags/country_flags.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_ui/commons/constants/app_colors.dart';
 import 'package:flutter_ui/commons/widgets/custom_app_bar.dart';
@@ -70,7 +71,7 @@ class _DetailsPageState extends State<DetailsPage> {
                               child: Stack(
                                 children: [
                                   CustomCard(
-                                    // height: 500.0,
+                                    height: 500.0,
                                     child: Column(
                                       crossAxisAlignment:
                                           CrossAxisAlignment.center,
@@ -97,17 +98,112 @@ class _DetailsPageState extends State<DetailsPage> {
                                           child: Row(
                                             mainAxisAlignment:
                                                 MainAxisAlignment.spaceBetween,
-                                            children: const [
-                                              Text('1'),
+                                            children: [
+                                              Row(
+                                                children: [
+                                                  Text('1'),
+                                                  CountryFlags.flag(
+                                                    'br',
+                                                    width: 32,
+                                                    height: 24,
+                                                  ),
+                                                ],
+                                              ),
                                               Icon(
                                                 Icons.clear,
                                                 color: AppColors.grey,
-                                                size: 30.0,
+                                                size: 24.0,
                                               ),
-                                              Text('3'),
+                                              Row(
+                                                children: [
+                                                  CountryFlags.flag(
+                                                    'ar',
+                                                    width: 32,
+                                                    height: 24,
+                                                  ),
+                                                  SizedBox(
+                                                    width: 40,
+                                                    height: 80,
+                                                    child: Form(
+                                                      child: TextFormField(
+                                                        style: const TextStyle(
+                                                          color:
+                                                              AppColors.white,
+                                                        ),
+                                                        decoration:
+                                                            const InputDecoration(
+                                                          filled: true,
+                                                          fillColor:
+                                                              AppColors.dark,
+                                                          contentPadding:
+                                                              EdgeInsets.all(
+                                                            8.0,
+                                                          ),
+                                                          focusedBorder:
+                                                              OutlineInputBorder(
+                                                            borderSide:
+                                                                BorderSide(
+                                                              color: AppColors
+                                                                  .grey,
+                                                            ),
+                                                          ),
+                                                          enabledBorder:
+                                                              OutlineInputBorder(
+                                                            borderSide:
+                                                                BorderSide(
+                                                              color: AppColors
+                                                                  .greyDark,
+                                                            ),
+                                                          ),
+                                                        ),
+                                                      ),
+                                                    ),
+                                                  )
+                                                ],
+                                              )
                                             ],
                                           ),
                                         ),
+                                        // Expanded(
+                                        //   child: Form(
+                                        //     child: Column(
+                                        //       children: [
+                                        //         SizedBox(
+                                        //           width: 40,
+                                        //           height: 36,
+                                        //           child: TextFormField(
+                                        //             style: const TextStyle(
+                                        //               color: AppColors.white,
+                                        //             ),
+                                        //             decoration:
+                                        //                 const InputDecoration(
+                                        //               filled: true,
+                                        //               fillColor: AppColors.dark,
+
+                                        //               contentPadding:
+                                        //                   EdgeInsets.all(
+                                        //                 8.0,
+                                        //               ),
+                                        //               focusedBorder:
+                                        //                   OutlineInputBorder(
+                                        //                 borderSide: BorderSide(
+                                        //                   color: AppColors.grey,
+                                        //                 ),
+                                        //               ),
+                                        //               enabledBorder:
+                                        //                   OutlineInputBorder(
+                                        //                 borderSide: BorderSide(
+                                        //                   color: AppColors
+                                        //                       .greyDark,
+                                        //                 ),
+                                        //               ),
+                                        //             ),
+                                        //           ),
+                                        //         ),
+                                        //       ],
+                                        //     ),
+                                        //   ),
+                                        // )
                                       ],
                                     ),
                                     // polls[index],

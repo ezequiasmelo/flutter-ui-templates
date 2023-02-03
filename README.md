@@ -26,3 +26,5 @@ repository patterns
     flutter_svg
 
     google_fonts
+
+    country_flags
